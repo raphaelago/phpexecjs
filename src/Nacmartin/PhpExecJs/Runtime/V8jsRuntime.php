@@ -74,7 +74,7 @@ class V8jsRuntime implements RuntimeInterface
             $snapshot = \V8Js::createSnapshot($code);
         }
         $this->v8 = null;
-        $this->v8 = new \V8Js('PHP', [], [], true, $snapshot);
+        $this->v8 = new \V8Js('PHP', [], $snapshot);
     }
 
     public function supportsCache()
